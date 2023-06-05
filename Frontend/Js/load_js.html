@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function loadJsFile(src) {
+            let promise1 = new Promise((resolve, reject) => {
+                const script = document.createElement('script');
+                script.src = src;
+
+                script.onload = () => {
+                    resolve("JS file loaded successfully");
+                } 
+                script.onerror = () => {
+                    reject(new Error(`Failed to load JS file: ${src}`)
+                    )};
+
+                document.body.append(script);
+            });
+            return promise1
+        }
+
+        const jsFile = "load_js.js";
+
+        async function loadScript() {
+            try {
+                const success = await loadJsFile(jsFile);
+                alert(success);
+            } catch (error) {
+                console.error(`Error: ${error.name} - ${error.message}`);
+            }
+        }
+
+        loadScript();
+
+    </script>
+</body>
+</html>

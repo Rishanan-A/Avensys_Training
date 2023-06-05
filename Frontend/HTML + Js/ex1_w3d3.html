@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let numbers = [1,2,4,6,8];
+
+        while (true) {
+        let input = parseInt(prompt("Enter a number (0 to stop):"), 10);
+
+        if (isNaN(input)) {
+            alert("Invalid input. Please enter a number.");
+            continue;
+        }
+
+        if (input === 0) {
+            break;
+        }
+
+        numbers.push(input);
+        }
+
+// Output the updated array
+console.log("The final array of numbers is:", numbers);
+    </script>
+</body>
+</html>

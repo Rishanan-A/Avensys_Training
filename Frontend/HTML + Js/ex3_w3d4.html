@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Display and square an array using JavaScript</title>
+  </head>
+  <body>
+    <p>Array1: <span id="array1"></span></p>
+    <button onclick="squareArray()">Square array</button>
+    <p>Array2: <span id="array2"></span></p>
+
+    <script>
+      var array1 = [1, 2, 3, 4, 5];
+      var array2 = [];
+
+      // display the contents of array1 on the page
+      document.getElementById("array1").innerHTML = array1.join(", ");
+
+      function squareArray() {
+        // square each element in array1 and store the result in array2
+        for (var i = 0; i < array1.length; i++) {
+          array2.push(array1[i] * array1[i]);
+        }
+
+        // display the contents of array2 on the page
+        document.getElementById("array2").innerHTML = array2.join(", ");
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <style>
+        .div1{
+            border:solid;
+            padding: 40px;
+            font-size: 40px;
+        }
+    </style>
+</head>
+<body>
+    <div id="1" class="div1" style="background-color:yellow;">
+        1
+        <div id="2" class="div1" style="background-color:orange;">
+            2
+            <div id="3" class="div1" style="background-color:gray;">
+                3
+            </div>
+        </div>
+    </div>
+    <script>
+
+        
+        //321
+        document. getElementById("1").addEventListener("click",function(){
+        // alert("you have clicked outer element")
+        console. log("1")
+        },false)
+
+        document. getElementById("2").addEventListener("click",function(){
+        // alert("you have clicked outer element")
+        console. log("2")
+        },false)
+
+        document. getElementById("3").addEventListener("click",function(){
+        // alert("you have clicked outer element")
+        console. log("3")
+        },true)
+        
+
+
+    </script>
+    
+</body>
+</html>

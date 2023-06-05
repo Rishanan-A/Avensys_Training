@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <style>
+        .r{
+            background-color: yellow;
+        }
+        .y{
+            background-color: aqua;
+        }
+    </style>
+</head>
+<body>
+   <div id="first" class="r">
+        <span>Hello how are you?</span>
+   </div>
+   <button onclick="handleClick()">Toggle</button>
+
+   <script>
+        function handleClick() {
+       let f =document.getElementById("first")
+       f.classList.toggle("r")
+    }
+   </script>
+</body>
+</html>

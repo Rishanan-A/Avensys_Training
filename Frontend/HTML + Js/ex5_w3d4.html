@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <style>
+        .bz {
+            height: 70px;
+            width: 70px;
+            border: solid;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="b1 bz" style="background-color: yellowgreen"></div>
+        <div class="b2 bz" style="background-color: blue"></div>
+        <div class="b3 bz" style="background-color: orange"></div>
+    </div>
+    <button id="button1">button 1</button>
+    <button id="button2">button 2</button>
+    <button id="button3">button 3</button>
+
+    <script>
+
+        button1 = document.getElementById('button1');
+        button1.addEventListener('click', Default);
+
+        button2 = document.getElementById('button2');
+        button2.addEventListener('click', boxLeft);
+
+        button3 = document.getElementById('button3');
+        button3.addEventListener('click', boxRight);    
+            
+        function Default() {
+            var container = document.querySelector('.container');
+            container.style.display = 'flex';
+            container.style.justifyContent = 'flex-start';
+            container.style.flexDirection = 'column';
+        }
+
+        function boxLeft() {
+            var container = document.querySelector('.container');
+            container.style.display = 'flex';
+            container.style.justifyContent = 'flex-start';
+            container.style.flexDirection = 'row';
+        }
+
+        function boxRight() {
+            var container = document.querySelector('.container');
+            container.style.display = 'flex';
+            container.style.justifyContent = 'flex-end';
+            container.style.flexDirection = 'row';
+        }
+
+        
+    </script>
+</body>
+</html>

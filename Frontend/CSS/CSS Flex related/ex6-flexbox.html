@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <style>
+        .container{
+        background-color: black;
+        padding: 10px;
+        height: 450px;
+        display: flex;
+        /*Horizontal*/
+        align-items: center;
+        /*Vertical*/
+        justify-content: center; /* space-around/between/even / flex-end / center */
+        flex-direction: column-reverse; /*flex-reverse/column-reverse*/
+        flex-wrap: wrap;
+        }
+        .item{
+        padding: 15px; 
+        font-size: 35px;
+        text-align: center;
+        } 
+        /* align-self: flex-start in individual div*/
+    </style>
+</head>
+<body>
+    <div class="container">
+
+    <div class="item item1" style="background-color: red; order: 1;">
+        1
+    </div>
+    <div class="item item2" style="background-color: green;">
+        2
+    </div>
+    
+    <div class="item item3" style="background-color: orange;"> 
+        3
+    </div>
+    <div class="item item4" style="background-color: yellowgreen; order: -1;">
+        4
+    </div>
+    <div class="item item5" style="background-color: lightblue;">
+        5
+    </div>
+    <div class="item items" style="background-color: yellow;">
+        6
+    </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <link rel="stylesheet" href="bootstrap.css">
+
+    <style>
+        .yellow-box {
+          background-color: orange;
+          width: 100px;
+          height: 100px;
+          display: flex;
+          justify-content: left;
+          align-items: left;
+          font-size: 2rem;
+          margin: 10px;
+        }
+      </style>
+</head>
+<body>
+    <div id="carouselExample" class="carousel slide w-50 bg-black">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="d-flex flex-wrap justify-content-center">
+              <div class="yellow-box">1</div>
+              <div class="yellow-box">2</div>
+              <div class="yellow-box">3</div>
+              <div class="yellow-box">4</div>
+              <div class="yellow-box">5</div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="d-flex flex-wrap justify-content-center">
+              <div class="yellow-box">6</div>
+              <div class="yellow-box">7</div>
+              <div class="yellow-box">8</div>
+              <div class="yellow-box">9</div>
+              <div class="yellow-box">10</div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="d-flex flex-wrap justify-content-center">
+              <div class="yellow-box">11</div>
+              <div class="yellow-box">12</div>
+              <div class="yellow-box">13</div>
+              <div class="yellow-box">14</div>
+              <div class="yellow-box">15</div>
+            </div>
+          </div>
+        </div>
+
+        
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+
+      <script src="bootstrap.js"></script>
+</body>
+</html>

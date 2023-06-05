@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Get User Input with Prompt</title>
+</head>
+<body>
+	<script>
+		// Ask the user for a number between 1 and 10
+		let num = prompt("Please enter a number between 1 and 10:");
+		
+		// Convert the input to a number
+		num = parseInt(num);
+
+		// Check if the input is valid
+		if (isNaN(num) || num < 1 || num > 10) {
+			alert("Invalid input. Please enter a number between 1 and 10.");
+		} else {
+			// Log the numbers from 0 to the input number
+            let k=0
+			for (let i = 0; i <= num; i++) {
+				console.log(i);
+                k+=i
+			}
+            console.log(k)
+		}
+	</script>
+</body>
+</html>

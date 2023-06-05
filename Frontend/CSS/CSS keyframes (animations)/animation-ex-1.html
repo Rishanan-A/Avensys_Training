@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <style>
+        .box {
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+            left: 0;
+            top: 0;
+            animation: moveBox 10s infinite;
+        }
+        
+        @keyframes moveBox {
+            0% {
+                left: 0;
+                top: 0;
+            }
+            25% {
+                left: 400px;
+                top: 0;
+            }
+            50% {
+                left: 400px;
+                top: 400px;
+            }
+            75% {
+                left: 0;
+                top: 400px;
+            }
+            100% {
+                left: 0;
+                top: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+</body>
+</html>

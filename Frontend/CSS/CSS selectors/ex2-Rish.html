@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Rishanan</title>
+    <style>
+        div {
+            padding-top: 50px;
+            padding-left: 80px;
+        }
+        
+        /* set purple background color for Child-1, Child-2, and Child-3 */
+        div h1:nth-child(1),
+        div h1:nth-child(2),
+        div h1:nth-child(3) {
+            background-color: purple;
+        }
+        
+        /* set orange background color for Child-4 */
+        div h1:nth-child(4) {
+            background-color: orange;
+        }
+    </style>
+</head>
+<body style="background-color: lightblue;">
+    <div>
+        <h1>
+            Child-1
+        </h1>
+        <h1>
+            Child-2
+        </h1>
+        <h1>
+            Child-3
+        </h1>
+        <h1>
+            Child-4
+        </h1>
+    </div>
+</body>
+</html>

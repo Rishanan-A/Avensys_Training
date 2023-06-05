@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Logging Numbers Example</title>
+</head>
+<body>
+  <script>
+    function logNumbers() {
+      var count = 1;
+
+      var interval = setInterval(function() {
+        console.log(count);
+        count++;
+
+        if (count > 10) {
+          clearInterval(interval);
+        }
+      }, 1000); 
+    }
+  </script>
+</body>
+</html>

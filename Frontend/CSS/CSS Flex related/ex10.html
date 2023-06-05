@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <style>
+        .container{
+        width: 600px;
+        border: 5px solid red;
+        display: flex;
+        
+        flex-wrap: wrap;
+        }
+        .item{
+        padding: 15px; 
+        font-size: 35px;
+        text-align: center;
+        } 
+        /* align-self: flex-start in individual div*/
+    </style>
+</head>
+<body>
+    <div class="container">
+
+    <div class="item item1" style="background-color: red;order:0;">
+        1
+    </div>
+    <div class="item item2" style="background-color: green; width: 450px; order:0;">
+        2
+    </div>
+    
+    <div class="item item3" style="background-color: orange;"> 
+        3
+    </div>
+    <div class="item item4" style="background-color: yellowgreen;order:-5;">
+        4
+    </div>
+    <div class="item item5" style="background-color: lightblue; order:-4;">
+        5
+    </div>
+    <div class="item items" style="background-color: yellow;order:-3;">
+        6
+    </div>
+    <div class="item items" style="background-color: white;order:-1;width: 400px;">
+        
+    </div>
+    </div>
+</body>
+</html>

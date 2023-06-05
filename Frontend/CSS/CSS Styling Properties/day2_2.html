@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Box Example</title>
+	<style>
+		.outer-box {
+			background-color: yellow;
+			border: 2px dashed black;
+			padding: 50px 20px 20px 20px; /* add more top padding */
+		}
+
+		.middle-box {
+			background-color: white;
+			border: 2px solid black;
+			padding: 20px;
+		}
+
+		.inner-box {
+			background-color: lightblue;
+			border: 2px solid black;
+			padding: 20px;
+		}
+
+		.smallest-box {
+			background-color: white;
+			border: 2px dashed black;
+			padding: 20px;
+		}
+
+		h1 {
+			padding-left: 100px;
+			margin-top: 0; /* remove default margin */
+		}
+
+		p {
+			margin-left: 10px;
+			margin-top: 5px; /* add some top margin */
+		}
+
+		p1 {
+			margin-left: 30px;
+			margin-top: 10px; /* add more top margin */
+		}
+
+		p2 {
+			margin-left: 50px;
+			margin-top: 10px; /* add more top margin */
+		}
+
+		p3 {
+			margin-left: 100px;
+			margin-top: 10px; /* add more top margin */
+		}
+	</style>
+</head>
+<body>
+	<div class="outer-box">
+		<div class="middle-box">
+			<div class="inner-box">
+				<div class="smallest-box">
+					<h1>Hello World</h1>
+					<p3>Content</p3>
+				</div>
+				<p2>Padding</p2>
+			</div>
+			<p1>Border</p1>
+		</div>
+		<p>Margin</p>
+	</div>
+</body>
+</html>

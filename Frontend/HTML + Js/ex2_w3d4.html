@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <div >
+        <div id="new">
+
+        </div>
+    </div>
+
+    <script>
+        let newDiv = document.getElementById("new")
+        let newPara = document.createElement("h1")
+        let newText = document.createTextNode("Content inside the new div")
+        newPara.appendChild(newText)
+        newDiv.appendChild(newPara)
+    </script>
+    
+</body>
+</html>

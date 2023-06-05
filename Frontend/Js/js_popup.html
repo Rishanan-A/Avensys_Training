@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Popup Example</title>
+</head>
+<body>
+    <button onclick="showPopup()">Click for pop up</button>
+
+    <script>
+        function showPopup() {
+            alert('Hello, this is a popup!');
+        }
+    </script>
+
+
+<button onclick="showConfirm()">Click for confirm box</button>
+
+    <script>
+        function showConfirm() {
+            let result = confirm('Are you sure you want to continue?');
+            if (result) {
+                alert('You clicked OK');
+            } else {
+                alert('You clicked Cancel');
+            }
+        }
+    </script>
+
+
+    <button onclick="showPrompt()">Click for prompt</button>
+
+    <script>
+        function showPrompt() {
+            let name = prompt('What is your name?');
+            if (name === "") {
+                alert('Error, Please enter your name!');
+                showPrompt()
+            }
+            else if (name !== null){
+                
+                alert('Hello, ' + name + '!');
+            }
+            else {
+                alert('You clicked Cancel');
+            }
+        }
+    </script>
+</body>
+</html>

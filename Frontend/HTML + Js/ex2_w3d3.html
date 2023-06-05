@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let initialArray = [3, 8, 12, 17, 20, 28, 35, 40, 56, 84, 92];
+
+        let divByFour = initialArray.filter((number) => number % 4 === 0);
+        let finalArray = initialArray.filter((number) => number % 4 !== 0);
+
+        console.log("Initial array:", initialArray);
+        console.log("Final array:", finalArray);
+        console.log("Numbers removed (divisible by 4):", divByFour);
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+    <title>DOM</title>
+    <style>
+        .div1{
+            border: solid;
+            padding: 40px;
+            font-size: 25px;
+
+        }
+        .bz{
+            height: 70px;
+            width: 70px;
+            border: solid;
+        }
+
+        .container{
+            height: 220px;
+            border: solid;
+          
+         
+        }
+    </style>
+</head>
+<body>
+    <!-- <div id="para1" class="d d1 d2 d3">
+
+        <h1 id="head1" class="h d">This is a Heading</h1>
+
+        <p id="para2" class="p d1 d">This is a paragraph 1</p>
+
+        <p>THIS IS A PARAGRAPH FROM FUTURE</p>
+
+        <p>This is the third paragraph</p>
+
+        <img src="image.png" height="170px" width="170px">
+    </div>
+
+    <div id="create">
+
+        <h1 id="hh1">Heading</h1>
+
+
+        <h2>heading 2</h2>
+
+        
+        <h3>heading 3</h3>
+
+        <div id="swap" style="height: 100px;width: 100px;background-color: red;">
+
+        </div>
+
+    </div>
+
+    <button id="mybtn" onclick="fun()">Try it</button>
+
+    <h2 id="demo"></h2> -->
+
+
+
+    <h2>Event Bubbling</h2>
+
+    <!-- <div id="outer" style="background-color: yellow;padding: 40px;">
+        <h2 style="background-color: orange;padding: 40px;">Bubbling</h2>
+        <div id="inner" style="background-color:green;padding: 40px;">Click </div>
+    </div> -->
+
+    <div class="div1" style="background-color:yellow ;">
+        1
+        <div class="div1" style="background-color: orange;">
+            2
+            <div class="div1" style="background-color: gray;">
+                3
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <br><br><br>
+    <div class="container">  
+    <div class="b1 bz" style="background-color: yellowgreen;">
+
+    </div>
+    <div class="b2 bz" style="background-color:blue">
+
+    </div>
+    <div class="b3 bz" style="background-color: orange">
+
+    </div>
+</div>
+
+
+<button onclick="fun()">button 1</button>
+
+<button>button 2</button>
+
+<button>button 3</button>
+    
+    
+    <script>
+
+        let a = document.getElementsByClassName("container")[0]
+        let b= document.getElementsByClassName("b1")[0]
+        let c=document.getElementsByClassName("b2")[0]
+        let d= document.getElementsByClassName("b3")[0]
+
+        let butn1=document.getElementsByTagName("button")[1]
+
+        a.addEventListener("click",fun)
+
+        function fun(){ a.style.display="flex"}
+       
+        a.addEventListener("click",fun2)
+        
+        function fun2(){a.style.display="flex";
+                        a.style.justifyContent="right"
+                    }
+                butn1.addEventListener("click",fun2)
+
+        // document.getElementById("inner").addEventListener("click",function(){
+        //     // alert("you clicked the inner element")
+        //     console.log("inner")
+        // },false)
+
+        // document.getElementById("outer").addEventListener("click",function(){
+        //     // alert("you have clicked outer element")
+        //     console.log("outer")
+        // },true)
+
+
+
+
+
+
+
+
+
+
+        // let p1=5
+        // let p2=7
+        // document.getElementById("mybtn").addEventListener("click",function(){
+        //     myfunction(p1,p2)
+        // })
+
+        // function myfunction(a,b){
+        //     document.getElementById("demo").innerHTML=a*b
+        // }
+
+
+
+
+
+        // var x = document.getElementById("mybtn")
+        // x.addEventListener("click",myfunction)
+        // x.addEventListener("click",secfun)
+        
+
+        // function myfunction(){
+        //     alert("alert box called")
+        // }
+
+        // function secfun(){
+        //     alert("alert 2")
+        // }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        // let ourdiv = document.getElementById("create")
+        // let swapme = document.getElementById("swap")
+        // let newimg = document.createElement("img")
+        // newimg.setAttribute("src","image11.png")
+        // newimg.setAttribute("height","100px")
+        // newimg.setAttribute("width","100px")
+        // ourdiv.replaceChild(newimg,swapme)
+        // ourdiv.removeChild(newimg)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        //     let hh= document.getElementById("hh1")
+        //     let ourDiv = document.getElementById("create")
+        // let newpara=document.createElement("h1")
+        // let newtext=document.createTextNode("this is the newly created paragraph")
+        // newpara.appendChild(newtext)
+        // ourDiv.appendChild(newpara)
+        // ourDiv.insertBefore(newpara,hh)
+
+
+    // let a = document.getElementsByTagName("p")[2]
+    //     a.style.color="red"
+    //     a.style.marginLeft="100px"
+
+        // let a = document.getElementsByTagName('img')[0]
+        // console.log(a.getAttribute("alt"))
+        // a.setAttribute("alt","Ihave sucessfully set the attribute")
+        // a.setAttribute("height", "200px")
+        // a.setAttribute("width", "200px")
+        // console.log(a.getAttribute("alt"))
+        // console.log(a.getAttribute("height")) 
+
+        // let b = document.getElementById("para1")
+        // b.setAttribute("style","background-color:red") 
+
+        // let a = document.querySelector("p").innerHTML
+        // console.log(a)
+
+        // let b=document.querySelector("div").innerHTML
+        // console.log(b)
+
+        // let c = document.querySelector("#head1").innerHTML
+        // console.log(c)
+
+        // let d = document.querySelector(".d").innerHTML
+        // console.log(d)
+
+        // let e = document.querySelectorAll("p")[2]
+        // console.log(e)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        // let a = document.getElementsByTagName("p")[1]
+        // console.log(a)
+        // document.getElementsByTagName("p")[1].innerHTML="succesfully changed"
+
+        // let b = document.getElementsByTagName("div")[0].innerHTML
+        // console.log(b)
+
+
+
+
+
+        // let a = document.getElementsByClassName("d1")[0].innerHTML
+        // console.log(a)
+        // let b = document.getElementsByClassName("d")[2].innerHTML
+        // document.getElementsByClassName("d")[2].innerHTML="Changed using the classname"
+        // console.log(b)
+
+
+        // let a = document.getElementById("para1")
+        // document.getElementById("head1").innerHTML="This is a heading not a paragraph"
+        // console.log(a)
+        // // document.write(a)
+        // // document.getElementById("para1").innerHTML="HELLO GOOD MORNING"
+        // let b = document.getElementById("para2")
+        // b.innerHTML="Changed using DOM"
+    </script>
+</body>
+</html>

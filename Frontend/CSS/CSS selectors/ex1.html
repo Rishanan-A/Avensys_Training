@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <style>
+        h1:first-child{
+            color: red;
+        }
+        p:first-child{
+            background-color: blue;
+        }
+        p:last-child{
+            background-color: yellow;
+        }
+        p::first-line{
+            font-size: 25px;
+        }
+        p::first-letter{
+            color: red;
+        }
+        div:nth-child(2n-1){
+            background-color: beige;
+        }
+        div:nth-child(odd){
+            color: green;
+        }
+        p::after{
+            content: "Added this line to content";
+        }
+        p::selection{
+            background-color: black;
+            color: white;
+        }
+        
+    </style>
+</head>
+<body>
+    <div>
+    <h1>Heading 1</h1>
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+        Numquam alias sint culpa asperiores quis esse corporis, pariatur provident a aspernatur unde, in ut, 
+        tenetur similique placeat quos quod assumenda! Molestias?
+    </p>
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+    </p>
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+    </p>
+    <h1>Heading 1</h1>
+    </div>
+    <div>
+        <h1>Heading 1</h1>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+            Numquam alias sint culpa asperiores quis esse corporis, pariatur provident a aspernatur unde, in ut, 
+            tenetur similique placeat quos quod assumenda! Molestias?
+        </p>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        </p>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        </p>
+        <!--<h1>Heading 1</h1>-->
+    </div>
+    <div>
+        <h1>Heading 1</h1>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+            Numquam alias sint culpa asperiores quis esse corporis, pariatur provident a aspernatur unde, in ut, 
+            tenetur similique placeat quos quod assumenda! Molestias?
+        </p>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        </p>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        </p>
+        <!--<h1>Heading 1</h1>-->
+    </div>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <style>
+        .a{
+            background-color: orange;
+            height: 150px;
+            width: 150px;
+            animation: anime 3s infinite;
+        }
+
+        @keyframes anime {
+            from{
+                background-color: orange;
+                border-radius: 0%;
+                /*width: 50px;*/
+                margin-left: 100px;
+            }
+            to{
+                background-color: red;
+                border-radius: 100%;
+                margin-left: 0px;
+            }
+        }
+        .b{
+            background-color: green;
+            height: 150px;
+            width: 150px;
+            transition-property: height, width;
+            transition-duration: 4s,10s;
+            /*transition-delay: 2s;*/
+        }
+        .b:hover{
+            height: 250px;
+            width: 450px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="a">
+
+    </div>
+    <div class="b">
+
+    </div>
+</body>
+</html>

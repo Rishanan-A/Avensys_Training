@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <link rel="stylesheet" href="bootstrap.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="bootstrap.js"></script>
+
+    <style>
+        .yellow-box {
+          background-color: orange;
+          width: 100px;
+          height: 100px;
+          display: flex;
+          justify-content: left;
+          align-items: left;
+          font-size: 2rem;
+          margin: 10px;
+        }
+    </style>
+    <script>
+        $(document).ready(function() {
+          // Load carousel pages
+          loadCarouselPage('#carouselPage1', 'page1.html');
+          loadCarouselPage('#carouselPage2', 'page2.html');
+
+          function loadCarouselPage(elementId, pageUrl) {
+            $.ajax({
+              url: pageUrl,
+              success: function (data) {
+                $(elementId).html(data);
+              }
+            });
+          }
+        });
+    </script>
+</head>
+<body>
+    <div id="carouselExample" class="carousel slide w-50 bg-black">
+        <div class="carousel-inner">
+          <div class="carousel-item active" id="carouselPage1"></div>
+          <div class="carousel-item" id="carouselPage2"></div>
+        </div>
+
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+</body>
+</html>
