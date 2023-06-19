@@ -1,0 +1,43 @@
+
+
+<!-- <h1 class="h1">This is a header</h1>
+
+
+<ul>
+    
+    <div *ngFor="let a of contacts; index as i; first as f; even as e; odd as o">
+        <li *ngIf="e" style="background-color: yellow; width:15%;">
+           {{i+1}} {{a.ID}} {{a.fName}} {{a.lName}} 
+        </li>
+        <li *ngIf="o" style="background-color: yellowgreen;width:15%">
+            {{i+1}} {{a.ID}} {{a.fName}} {{a.lName}} 
+         </li>
+    </div>
+    <table>
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>ID</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+            </tr>
+        </thead>
+        <tbody *ngFor="let a of contacts; index as i; first as f; even as e; odd as o">
+            <tr *ngIf="e" style="background-color: yellow;">
+                <td>{{i+1}}</td>
+                <td>{{a.ID}}</td>
+                <td>{{a.fName}}</td>
+                <td>{{a.lName}}</td>
+            </tr>
+            <tr *ngIf="o" style="background-color: yellowgreen;">
+                <td>{{i+1}}</td>
+                <td>{{a.ID}}</td>
+                <td>{{a.fName}}</td>
+                <td>{{a.lName}}</td>
+            </tr>
+        </tbody>
+    </table>
+    
+</ul> -->
+
+<router-outlet></router-outlet>

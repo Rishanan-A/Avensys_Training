@@ -1,0 +1,37 @@
+<h1></h1>
+<form #addForm="ngForm" (submit)="formTest1(addForm)">
+    <label>firstname:</label>
+    <input type="text" [(ngModel)]="firstname" 
+    name="firstname" require minlength="8">
+    <br>
+    <br>
+    
+    <label>Agreement:</label>
+    <input type="checkbox" [(ngModel)]="checkBoxValue" 
+    name="checkBoxValue" required>
+    <br>
+    <br>
+
+    
+    <label>Option:</label>
+    <select name="selectedOption" [(ngModel)]="selectedOption" 
+    required>
+        <option value="1">Option 1</option>
+        <option value="2">Option 2</option>
+    </select>
+    <br>
+    <br>
+
+    <label>Agreement:</label>
+    <textarea name="description" [(ngModel)]="description" 
+    required maxlength="3"></textarea>
+    <br>
+    <br>
+    
+    <button type="submit" 
+    [disabled]="!addForm.valid">Submit</button>
+
+    <button (click)="resetForm(addForm)">Reset</button>
+
+    <button (click)="setValues(addForm)">Set</button>
+</form>

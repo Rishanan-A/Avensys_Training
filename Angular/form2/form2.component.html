@@ -1,0 +1,77 @@
+<p>form2 works!</p>
+
+<form [formGroup]="addForm">
+  <table>
+    <tr>
+      <td>
+        <input type="text" formControlName="textField">
+        <span *ngIf="addForm.get('textField').touched">
+          <span style="color: red" *ngIf="addForm.get('textField').hasError('required')">
+            You need to fill in this blank
+          </span>
+          <span style="color: green" *ngIf="addForm.get('textField').hasError('minlength')">
+            Should have a minimum of 5 characters
+          </span>
+        </span>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <textarea formControlName="description"></textarea>
+        <span *ngIf="addForm.get('description').touched">
+          <span style="color: red" *ngIf="addForm.get('description').hasError('required')">
+            You need to fill in this blank
+          </span>
+          <span style="color: green" *ngIf="addForm.get('description').hasError('minlength')">
+            Should have a minimum of 5 characters
+          </span>
+        </span>
+        <span style="color: orange" *ngIf="addForm.get('description').hasError('maxlength')">
+          Should have a maximum of 10 characters
+        </span>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <select formControlName="dropDown">
+          <option value="Option 1">Option 1</option>
+          <option value="Option 2">Option 2</option>
+        </select>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <input type="checkbox" formControlName="checkBoxValue"> Check box<br><br>
+      </td>
+    </tr>
+
+    <!-- <tr>
+        <div formArrayName="users">
+            <div *ngFor="let c of addForm.controls['users']['controls']; let i =index">
+                <input type="text" [formControlName]="i">
+            </div>
+        </div>
+    </tr> -->
+
+    <button (click)="adval()" [disabled]="addForm.invalid">Click me</button>
+  <button (click)="resetForm()">RESET FORM</button>
+  <button (click)="addFormElements()">ADD FORM ELEMENTS</button>
+
+    <div formArrayName="users">
+        <div *ngFor="let c of addForm.controls['users']['controls'];let i=index;"[formGroupName]='i'>
+            <input type="text" formControlName="name" placeholder="Name">
+            <input type="text" formControlName="Marks" (blur)='assign(i)' placeholder="Marks">
+            <input type="text" formControlName="Branch" placeholder="Branch">
+            <button (click)="removeFormElements(i)">REMOVE FORM ELEMENTS</button>
+            <button (click)="assign(i)">ASSIGN BRANCH</button>
+        </div>
+    </div>
+
+  </table>
+
+  
+
+
+
+
+</form>

@@ -1,0 +1,75 @@
+<p>cop1 works!</p>
+
+<div [ngSwitch]="superpower">
+    <div *ngSwitchCase="'Batman'">This is power of Batman</div>
+    <div *ngSwitchCase="'Flash'">This is power of Flash</div>
+    <div *ngSwitchCase="'Wonderwoman'">This is power of Wonderwoman</div>
+    <div *ngSwitchCase="'Superman'">This is the power of Superman</div>
+    <div *ngSwitchCase="'Newguy'">This is power of Newguy</div>
+</div>
+  
+<div [ngStyle]="{'color': 'green'}">This is the NgStyle structural directive</div>
+
+<div [ngStyle]="{'color': r, 'background-color':g}">This is the NgStyle structural directive</div>
+
+<div [ngStyle]="{'color': r === 'red' ? 'red' : 'blue'}">
+    This is the third block
+</div>
+
+<div style="color: yellow">
+    normal div
+</div>
+
+<h1 class="c1 c3">{{sentence}}</h1>
+
+<div [ngClass]="getClass()">This is an NgClass directive</div>
+
+<div [innerHTML]="sentence">
+
+</div>
+
+<h1 [title]>This is a cop1 header</h1>
+
+<table style="background-color: grey;">
+    <tr>
+      <td>VALUE ONE</td>
+      <td>VALUE TWO</td>
+      <td>VALUE THREE</td>
+    </tr>
+    <tr>
+      <td [attr.colspan]="val">VALUE FOUR</td>
+      <td>VALUE FIVE</td>
+      <td>VALUE SIX</td>
+    </tr>
+  </table>
+  
+  <button (click)="hello()">CLICK ON IT</button>
+
+  <div (mouseover)="a(2, 44, 'str')">move the mouse over</div>
+
+  <section>
+    <div class="example-button-row">
+      <button mat-raised-button color="primary">Primary</button>
+    </div>
+  </section>
+
+<h2>Angular Pipes</h2>
+
+<div>
+    {{lower_Case|lowercase}}
+    {{upper_Case|uppercase}}
+</div>
+<div>
+    {{date_ex|date:'dd-MM-yyyy'}}
+</div>
+
+<div>
+    {{obj | json | uppercase}}
+</div>
+<div>
+    {{cur|currency:"SGD "}}
+</div>
+
+<div>
+    {{val1|percent}}
+</div>
